@@ -1,0 +1,529 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    outline: none;
+
+}
+.banner{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: #3475ca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.25;
+    object-fit: cover;
+
+}
+.banner .content
+{
+    position: relative;
+    max-width: 850px;
+    text-align: center;
+}
+.banner .content h2{
+    color: white;
+    font-size: 80px;
+    margin-bottom: 20px;
+
+}
+.banner .content p{
+    color: white;
+    font-size: 18px;
+}
+.banner header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner header .logo{
+    color: white;
+    font-size: 24px;
+    text-transform:uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.banner header .logo span{
+    color: lime;
+    font-size: 30px;
+    /* animation: animate infinite; */
+    transition: all 0.5s;
+}
+.banner header ul{
+    display: flex;
+}
+.banner header ul li{
+    margin: 0px 10px;
+    list-style: none;
+
+}
+.banner header ul li a{
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px 10px;
+    border: 2px solid white;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.banner header ul li a:hover{
+    background: white;
+    color: black;
+  
+}
+.about{
+    position: relative;
+    display: flex;
+
+}
+.about .contentbx{
+    width: 50%;
+    background: #162c3b;
+    padding: 100px;
+}
+.about .contentbx .heading{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 25px;
+
+}
+.about .contentbx .text{
+    color: white;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.about .about-img{
+    background: url('branding_images/window.jpg');
+  background-size: cover;
+  background-position: center;
+    width: 50%;
+}
+
+.services{
+    background: #12222d;
+    padding: 100px;
+    text-align: center;
+}
+.services .heading{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.services .text{
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+}
+.services .container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 60px;
+
+}
+.services .container .serviceBx{
+    position: relative;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    z-index:1;
+}
+.serviceBx .icon img{
+    max-width: 100px;
+    
+}
+
+.serviceBx .icon h3{
+    margin-top: 15px;
+    color: black;
+    letter-spacing: 1px;
+}
+.serviceBx:before{
+    content: "";
+    position: absolute;
+    width:350px ;
+    height: 5px;
+    top: 0;
+    left: 0;
+    background: #71DFE7;
+    transition: all 0.5s;
+    
+}
+.serviceBx:hover:before{
+    height: 400px;
+    z-index: -1;
+   
+
+}
+.serviceBx:hover h3{
+    color: white;
+}
+
+.client{
+    position: relative;
+    background: #325288;
+    width: 100%;
+    padding: 100px;
+}
+.heading
+{
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 25px;
+    letter-spacing: 1px;
+
+}
+.text{
+    text-align: center;
+    color: white;
+    font-weight: 300;
+}
+.client .contentBx{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+.client .contentBx img{
+    width: 250px;
+    opacity: 0.25;
+   transition: all 0.3s;
+}
+.client .contentBx img:hover{
+    opacity: 1;
+}
+.technology{
+    width: 100%;
+    background: #516BEB;
+    padding: 100px;
+    margin-top: -250px;
+}
+.technology .heading {
+   margin-top: 150px;
+}
+.technology .container{
+    width: 100%;
+    /* background: pink; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+.container p{
+    color: whitesmoke;
+    text-align: initial;
+}
+
+.container .tech-img img{
+    max-width: 300px;
+    margin-left: 100px;
+    opacity: 0.50;
+    transition: all 0.5s;
+}
+.container .tech-img img:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.technology button{
+    background: transparent;
+    border: none;
+    /* border-top-left-radius: 2px solid white; */
+    padding: 12px 30px;
+    position: relative;
+    transition: 0.5s all ;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.technology button:before,
+.technology button::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid;
+    transition: all 0.6s ease;
+    border-radius: 2px;
+}
+.technology button::after{
+bottom: 0;
+right: 0;
+border-top-color: transparent;
+border-left-color: transparent;
+border-bottom-color: yellow;
+border-right-color: yellow;
+}
+
+.technology button::before{
+top: 0;
+left: 0;
+border-bottom-color: transparent;
+border-right-color: transparent;
+border-top-color: yellow;
+border-left-color: yellow;
+}
+.technology button:hover:after,
+.technology button:hover:before{
+  width: 100%;
+  height: 100%;
+  transform: rotate(10deg);
+}
+.testimonial{
+    width: 100%;
+    height: 600px;
+    background:#EC255A ;
+    padding: 100px;
+}
+.testimonial .wrapper{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+  
+}
+.testimonial .wrapper .card{
+    background: white;
+    padding: 40px;
+    text-align: left;
+    position: relative;
+     margin: 0px 20px;
+     overflow: hidden;
+     z-index: 10;
+     transition: all 0.5s;
+     border-top-right-radius: 100px;
+     border-bottom-left-radius: 100px;
+}
+.testimonial .wrapper .card h3{
+    color: #ff0082;
+    margin-top: 20px;
+    transition: all 0.5s;
+}
+.testimonial .wrapper .card p{
+    font-style: italic;
+    font-weight: 300;
+    font-size: 16px;
+    transition: all 0.5s;
+}
+.testimonial .wrapper .card:before{
+    position: absolute;
+    content: " ";
+    width: 30px;
+    height: 30px;
+   top:0;
+    left: 0;
+    transition: all 0.5s;
+    background: #000957;
+   /* border-radius: 30px; */
+   
+}
+.testimonial .wrapper .card:after{
+    position: absolute;
+    content: " ";
+    width: 30px;
+    height: 30px;
+   bottom:0;
+    right: 0;
+    transition: all 0.5s;
+    background: #000957;
+   /* border-radius: 30px; */
+   
+}
+.testimonial .wrapper .card:hover:before,
+.testimonial .wrapper .card:hover:after{
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    
+}
+.testimonial .wrapper .span{
+    z-index: 990;
+    background: white;
+}
+.testimonial .wrapper .card:hover .span,
+.testimonial .wrapper.card:hover .span{
+   background: white;
+   z-index: 110;
+    
+}
+.testimonial .wrapper .card:hover{
+    border-top-left-radius: 100px;
+     border-bottom-right-radius: 100px;
+     border-top-right-radius: 0px;
+     border-bottom-left-radius: 0px;
+}
+.testimonial .wrapper .span:after{
+    position: absolute;
+    content: " ";
+    width: 30px;
+    height: 30px;
+   bottom:0;
+    left: 0;
+    transition: all 0.5s;
+    background: #fff;
+}
+.testimonial .wrapper .span:before{
+    position: absolute;
+    content: " ";
+    width: 30px;
+    height: 30px;
+   top:0;
+    right: 0;
+    transition: all 0.5s;
+    background: #fff;
+    z-index: 110;
+}
+.testimonial .wrapper .card:hover p{
+    color: white;
+}
+.testimonial .wrapper .card:hover h3{
+    color: yellow;
+}
+.contact-about{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.contact{
+    padding: 100px;
+    background: #162c3b;
+    text-align: center;
+    /* position: relative; */
+}
+.imgBx2{
+    background: url('branding_images/bg2.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    /* position: relative; */
+}
+.redbg{
+    background: url(branding_images/red.jpg) !important;
+    background-size: cover;
+    background-position: center;
+    /* position: absolute; */
+   
+}
+.contactBx{
+    position: relative;
+    height: 300px;
+    width: 80%;
+    background: #ffffff;
+    margin: 100px auto;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+}
+.contactBx::before{
+    content: " ";
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    height: 90px;
+    width: 90px;
+    background: white;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: linear-gradient(90deg, #f1d7d6 0,#e8e9f1 58%);
+    transition: 0.5s ;
+    animation: animate 1s linear infinite;
+
+}
+.contactBx::after{
+    content: " ";
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    height: 90px;
+    width: 90px;
+    background: white;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: linear-gradient(90deg, #f1d7d6 0,#e8e9f1 58%);
+    transition: 0.5s ;
+    animation: animation 1s linear infinite;
+
+}
+@keyframes animate {
+    0%{
+        transform: translateY(-40px);
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes animation {
+    0%{
+        transform: translateY(40px);
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.contactBtn button{
+    padding: 15px 50px;
+    outline: none;
+    border: none;
+    box-shadow: 5px 10px 10px rgba(0,0,0,.09);
+    transition: all 0.5s ease-in-out;
+   
+}
+
+.contactBtn button:hover{
+    
+    box-shadow: inset 10px 0px 10px 10px rgba(0,0,0,.07);
+    transform: scale(0.9);
+   
+}
+.contactBtn p{
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: gray;
+}
+.contactBtn button a{
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
